@@ -293,8 +293,8 @@ const Contact: React.FC = () => {
                     <div className="flex flex-col space-y-8">
 
                         <div>
-                            <h1 className="text-4xl loraParagraph text-[#d6c3a4] tracking-tight mb-2">
-                                Get in touch
+                            <h1 className="text-4xl text-center sm:text-left loraParagraph text-[#d6c3a4] tracking-tight mb-2">
+                                Get in Touch
                             </h1>
                             <p className="text-lg text-gray-400 montserratCTA  max-w-lg">
                                 Superpower is your financial confidence. Contact our team to get 24/7 support and submit your job application.

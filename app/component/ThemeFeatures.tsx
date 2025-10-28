@@ -727,7 +727,7 @@ const FeatureCard: React.FC<Feature> = ({ title, description, Icon, delay }) => 
 // 🏆 Luxury Oudh Features Section
 const LuxuryFeatures: React.FC = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 primaryBg">
+    <section className="py-20  primaryBg">
       <div className="templateContainer">
         {/* Header with animation */}
 
