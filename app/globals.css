@@ -1,26 +1,101 @@
+/* D:\Fawaahatul Khaleej\fawaahatul\app\globals.css */
 @import "tailwindcss";
+
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"); */
+
+/* fonts  */
+.playfairDisplayHeading {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* You can change this (100–900) */
+  font-style: normal; /* or italic */
+}
+
+.cormorantGaramondSubheading {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* You can change this (100–900) */
+  font-style: normal; /* or italic */
+}
+
+.loraParagraph {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* You can change this (100–900) */
+  font-style: normal; /* or italic */
+}
+
+.montserratCTA {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* You can change this (100–900) */
+  font-style: normal; /* or italic */
+}
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* --foreground: #171717; */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.templateContainer {
+  @apply max-w-[1400px] mx-auto px-4  md:px-12 lg:px-20;
+}
+
+/* color and bg  */
+.primaryBg {
+  background-color: #1a0f0a;
+}
+
+.secondaryBg {
+  background-color: #2c1b12;
+}
+
+.beigeText {
+  color: #d6c3a4;
+}
+
+.bodyText {
+  color: #ede3d2;
+}
+
+.ctaBg {
+  background-color: #8b5e3c;
+}
+
+.ctaText {
+  color: #f9f4ed;
+}
+
+/* scroll bar  */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of vertical scrollbar */
+  height: 12px; /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track color */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 6px;
+  border: 3px solid #f0f0f0; /* Gives some padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Hover color */
+}
+
+/* Optional: For Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #8b5e3c #f0f0f0; /* thumb color, track color */
 }
