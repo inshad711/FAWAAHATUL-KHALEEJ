@@ -1,10 +1,12 @@
 
 
 import About2 from "./component/About2";
+import BannerSection from "./component/BannerSection";
+import CardFilter from "./component/CardFilter";
 import CollectionsSection from "./component/CollectionsSection";
 // import Describe from "./component/Describe";
 import Hero from "./component/Hero";
-import Testimonials from "./component/Testimonial";
+// import Testimonials from "./component/Testimonial";
 // import HeroAbout from "./component/HeroAbout";
 
 
@@ -17,7 +19,9 @@ export default function Home() {
       <CollectionsSection />
       {/* <Describe /> */}
       {/* <HeroAbout /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <BannerSection />
+      <CardFilter />
 
     </div>
   );

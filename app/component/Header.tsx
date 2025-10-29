@@ -62,7 +62,7 @@ const Header: React.FC = () => {
 
     return (
         <header
-            className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+            className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out ${isScrolled ? 'bg-[#efeef1] shadow-md' : 'bg-transparent'
                 }`}
         >
             <div className="templateContainer px-4 py-4 h-20 flex items-center justify-between">
