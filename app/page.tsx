@@ -2,8 +2,9 @@
 
 import About2 from "./component/About2";
 import BannerSection from "./component/BannerSection";
+import BestDeal from "./component/BestDeal";
 import CardFilter from "./component/CardFilter";
-import CollectionsSection from "./component/CollectionsSection";
+// import CollectionsSection from "./component/CollectionsSection";
 // import Describe from "./component/Describe";
 import Hero from "./component/Hero";
 // import Testimonials from "./component/Testimonial";
@@ -16,7 +17,8 @@ export default function Home() {
 
       <Hero />
       <About2 />
-      <CollectionsSection />
+      {/* <CollectionsSection /> */}
+      <BestDeal />
       {/* <Describe /> */}
       {/* <HeroAbout /> */}
       {/* <Testimonials /> */}
