@@ -36,7 +36,7 @@ const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ icon: Icon, title, va
             </div>
             <p className="text-lg  text-white">{title}</p>
         </div>
-        <a href={href} className="text-lg font-medium text-white hover:text-indigo-400 transition duration-150">
+        <a href={href} className="text-lg font-medium text-white hover:text-[#d6c3a4] transition duration-150">
             {value}
         </a>
     </div>
@@ -95,16 +95,18 @@ const Contact: React.FC = () => {
                             <h1 className="text-4xl text-center sm:text-left loraParagraph text-[#d6c3a4] tracking-tight mb-2">
                                 Get in Touch
                             </h1>
-                            <p className="text-lg text-gray-400 montserratCTA  max-w-lg">
-                                Superpower is your financial confidence. Contact our team to get 24/7 support and submit your job application.
+                            <p className="text-lg text-gray-400 montserratCTA max-w-lg">
+                                Discover the art of fragrance. Contact our team to find your signature scent and explore our exclusive perfume collection available 24/7.
                             </p>
+
                         </div>
 
                         <div className="mt-2">
-                            <CheckListItem text="Book a demo with our team to see Superpower" />
-                            <CheckListItem text="Get answers to the most popular questions" />
-                            <CheckListItem text="Submit your job application through this form" />
+                            <CheckListItem text="Explore our exclusive range of luxury perfumes" />
+                            <CheckListItem text="Discover the perfect scent with a personalized consultation" />
+                            <CheckListItem text="Join our fragrance community for exclusive offers and updates" />
                         </div>
+
 
                         <div className="space-y-6 pt-2">
                             <ContactInfoCard

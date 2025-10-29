@@ -77,7 +77,7 @@ const CollectionsSection: React.FC = () => {
 
                     <Link
                         href="/collection"
-                        className="inline-block cursor-pointer px-8 py-3 text-sm ctaBg ctaText rounded-sm montserratCTA transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#A0522D] focus:ring-opacity-50"
+                        className="inline-block cursor-pointer px-8 py-3 text-sm ctaBg ctaText rounded-sm montserratCTA transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none-opacity-50"
                     >
                         VIEW ALL COLLECTION
                     </Link>

@@ -14,10 +14,8 @@ const footerLinks = [
         links: [
             { name: "About Us", href: "/about" },
             { name: "Contact Us", href: "/contact" },
-            { name: "Privacy Policy", href: "#" },
-            { name: "Terms of use", href: "#" },
-
-
+            { name: "Privacy Policy", href: "/privacy-policy" },
+            { name: "Terms & Conditions", href: "/terms-conditions" },
         ],
     },
 ];
