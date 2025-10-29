@@ -1,5 +1,3 @@
-/////////////// all working
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -13,13 +11,24 @@ interface NavItem {
     href: string;
 }
 
+// Existing main navigation items
 const mainNavItems: NavItem[] = [
     { title: 'Home', href: '/' },
     { title: 'About us', href: '/about' },
     { title: 'Contact us', href: '/contact' },
 ];
 
-const Header: React.FC = () => {
+// New navigation items for the second row, based on the image
+const secondaryNavItems: NavItem[] = [
+    { title: 'PERFUMES', href: '/perfumes' },
+    { title: 'COLLECTIONS', href: '/collections' },
+    { title: 'BODY', href: '/body' },
+    { title: 'DISCOVERY', href: '/discovery' },
+    { title: 'GIFT IDEAS', href: '/gift-ideas' },
+    { title: 'HOUSE OF FAWAAHATUL', href: '/house' },
+];
+
+const HeaderTwo: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,6 +59,10 @@ const Header: React.FC = () => {
     const iconColor = isScrolled ? 'text-gray-800' : 'text-white';
     const textColor = isScrolled ? 'text-gray-800' : 'text-white';
 
+    // New: Color logic for the secondary row links
+    const secondaryTextColor = isScrolled ? 'text-gray-600' : 'text-white';
+
+
     const buttonBg = isScrolled
         ? 'bg-gray-800 text-white hover:bg-gray-700'
         : 'ctaBg text-white hover:bg-yellow-600';
@@ -65,8 +78,9 @@ const Header: React.FC = () => {
             className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
                 }`}
         >
+            {/* --- TOP ROW (Logo, Main Nav, Buttons) --- */}
             <div className="templateContainer px-4 py-4 h-20 flex items-center justify-between">
-                {/* Left: Nav Items */}
+                {/* Left: Nav Items (hidden on mobile) */}
                 <nav className="hidden md:flex items-center space-x-8 flex-1">
                     {mainNavItems.map((item) => {
                         const isActive = pathname === item.href;
@@ -122,6 +136,25 @@ const Header: React.FC = () => {
                 </div>
             </div>
 
+            {/* --- SECONDARY NAVIGATION ROW (Desktop Only) --- */}
+            <div className="hidden md:block border-t border-gray-100/30">
+                <nav className="templateContainer px-4 py-3 flex items-center justify-center space-x-10">
+                    {secondaryNavItems.map((item) => {
+                        const isActive = pathname === item.href;
+                        return (
+                            <Link
+                                key={item.title}
+                                href={item.href}
+                                className={`text-sm tracking-widest montserratCTA font-medium transition-colors duration-200 ${secondaryTextColor} ${isActive ? 'text-yellow-600' : ''} hover:text-yellow-600`}
+                            >
+                                {item.title}
+                            </Link>
+                        );
+                    })}
+                </nav>
+            </div>
+
+
             {/* --- Overlay (Dim Background) --- */}
             {isMobileMenuOpen && (
                 <div
@@ -154,8 +187,9 @@ const Header: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Mobile Nav Links */}
+                {/* Mobile Nav Links (Including secondary items) */}
                 <ul className="flex flex-col space-y-2 p-6">
+                    {/* Main Items */}
                     {mainNavItems.map((item) => {
                         const isActive = pathname === item.href;
                         return (
@@ -169,6 +203,23 @@ const Header: React.FC = () => {
                             </Link>
                         );
                     })}
+                    {/* Separator for secondary items */}
+                    <hr className="my-2 border-gray-200" />
+                    {/* Secondary Items added to mobile menu */}
+                    {secondaryNavItems.map((item) => {
+                        const isActive = pathname === item.href;
+                        return (
+                            <Link
+                                key={item.title}
+                                href={item.href}
+                                className={`text-gray-800 montserratCTA font-normal text-sm py-2 px-3 rounded hover:bg-gray-100 transition-colors ${isActive ? ' text-yellow-600' : ''}`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                {item.title}
+                            </Link>
+                        );
+                    })}
+
 
                     <button
                         className={`w-full mt-4 px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 shadow-xl ${buttonBg}`}
@@ -188,4 +239,4 @@ const Header: React.FC = () => {
     );
 };
 
-export default Header;
+export default HeaderTwo;
